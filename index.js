@@ -68,6 +68,14 @@ const SwipeoutBtn = React.createClass({
       width: btn.width,
     }]);
 
+    var styleSwipeoutTextWrapper = [];
+    
+    styleSwipeoutTextWrapper.push([{
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: 1
+    }])
+
     var styleSwipeoutBtnText = [styles.swipeoutBtnText];
 
     //  apply text color
@@ -83,8 +91,11 @@ const SwipeoutBtn = React.createClass({
         {
           (btn.component ?
             <View style={styleSwipeoutBtnComponent}>{btn.component}</View>
-            :
-            btn.text
+            : <View style={styleSwipeoutBtnComponent}>
+                <View style={styleSwipeoutTextWrapper}>
+                  <Text>{btn.text}</Text>
+                </View>
+              </View>
           )
         }
       </NativeButton>
