@@ -93,7 +93,7 @@ const SwipeoutBtn = React.createClass({
             <View style={styleSwipeoutBtnComponent}>{btn.component}</View>
             : <View style={styleSwipeoutBtnComponent}>
                 <View style={styleSwipeoutTextWrapper}>
-                  <Text>{btn.text}</Text>
+                  <Text style={styleSwipeoutBtnText}>{btn.text}</Text>
                 </View>
               </View>
           )
